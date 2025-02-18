@@ -1,4 +1,4 @@
-package vn.edu.t3h.employeemananger.controller;
+package vn.edu.t3h.employeemananger.controller.employee;
 
 import jakarta.servlet.RequestDispatcher;
 import jakarta.servlet.ServletException;
@@ -10,7 +10,7 @@ import vn.edu.t3h.employeemananger.dao.EmployeeDao;
 import vn.edu.t3h.employeemananger.dao.impl.EmployeeDaoMysql;
 import vn.edu.t3h.employeemananger.model.Employee;
 import vn.edu.t3h.employeemananger.service.EmployeeService;
-import vn.edu.t3h.employeemananger.service.EmployeeServiceImpl;
+import vn.edu.t3h.employeemananger.service.Impl.EmployeeServiceImpl;
 
 import java.io.IOException;
 import java.util.List;

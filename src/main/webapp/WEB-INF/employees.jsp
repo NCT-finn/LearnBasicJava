@@ -80,7 +80,7 @@
                 </div>
             </form>
             <%--            điều hướng sang url /action-employee--%>
-            <form action="addEmployee" method="get">
+            <form action="employee/addEmployee" method="get">
                 <button type="submit" class="btn btn-outline-primary">Thêm nhân viên</button>
             </form>
             <!-- Bảng danh sách nhân viên -->

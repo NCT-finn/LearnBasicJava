@@ -1,12 +1,13 @@
-package vn.edu.t3h.employeemananger.service;
+package vn.edu.t3h.employeemananger.service.Impl;
 
 import vn.edu.t3h.employeemananger.dao.EmployeeDao;
 import vn.edu.t3h.employeemananger.model.Department;
 import vn.edu.t3h.employeemananger.model.Employee;
+import vn.edu.t3h.employeemananger.service.EmployeeService;
 
 import java.util.List;
 
-public class EmployeeServiceImpl implements EmployeeService{
+public class EmployeeServiceImpl implements EmployeeService {
 
     private EmployeeDao employeeDao;
 

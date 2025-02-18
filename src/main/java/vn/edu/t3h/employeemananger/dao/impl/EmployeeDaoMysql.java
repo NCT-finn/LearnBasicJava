@@ -38,6 +38,8 @@ public class EmployeeDaoMysql implements EmployeeDao {
             }
         } catch (SQLException e) {
             throw new RuntimeException(e);
+        }finally {
+            closeConnection(connection);
         }
 
         return employeeList;
@@ -75,6 +77,8 @@ public class EmployeeDaoMysql implements EmployeeDao {
             }
        } catch (SQLException e) {
             throw new RuntimeException(e);
+        }finally {
+            closeConnection(connection);
         }
         return employeeList;
     }
@@ -100,6 +104,8 @@ public class EmployeeDaoMysql implements EmployeeDao {
             }
         } catch (SQLException e) {
             throw new RuntimeException(e);
+        }finally {
+            closeConnection(connection);
         }
         return employee;
     }
@@ -123,6 +129,8 @@ public class EmployeeDaoMysql implements EmployeeDao {
             }
         } catch (SQLException e) {
             throw new RuntimeException(e);
+        }finally {
+            closeConnection(connection);
         }
         return departmentList;
     }
@@ -153,6 +161,8 @@ public class EmployeeDaoMysql implements EmployeeDao {
             statement.executeUpdate();
         } catch (SQLException e) {
             throw new RuntimeException(e);
+        }finally {
+            closeConnection(connection);
         }
     }
 
@@ -167,6 +177,8 @@ public class EmployeeDaoMysql implements EmployeeDao {
             statement.executeUpdate();
         } catch (SQLException e) {
             throw new RuntimeException(e);
+        }finally {
+            closeConnection(connection);
         }
     }
 
@@ -188,6 +200,8 @@ public class EmployeeDaoMysql implements EmployeeDao {
             statement.executeUpdate();
         } catch (SQLException e) {
             throw new RuntimeException(e);
+        }finally {
+            closeConnection(connection);
         }
     }
 
@@ -264,5 +278,15 @@ public class EmployeeDaoMysql implements EmployeeDao {
             }
         }
         return convertDate;
+    }
+
+    private static void closeConnection(Connection conn) {
+        if (conn != null){
+            try {
+                conn.close();
+            } catch (SQLException e) {
+                e.printStackTrace();
+            }
+        }
     }
 }
